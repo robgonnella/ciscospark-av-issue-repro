@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multi-party Call</title>
+  </head>
+  <body>
+    <h1>Multi Party Call with Mute Controls</h1>
+
+    <form id="credentials">
+      <fieldset>
+        <legend>Credentials</legend>
+        <input
+          id="access-token"
+          name="accessToken"
+          placeholder="Your access token"
+          type="text">
+        <input id="connect" title="connect" type="submit" value="connect">
+        <p id="connection-status">disconnected</p>
+      </fieldset>
+    </form>
+
+    <form id="meeting-form">
+      <fieldset>
+        <legend>Start or Join a Meeting</legend>
+        <input
+          id="sip-address"
+          placeholder="SIP URI"
+          type="text"
+        >
+        </br>
+        </br>
+        <input type="submit" value="Start or Join Meeting">
+      </fieldset>
+    </form>
+
+    <form id="call-controls">
+      <fieldset>
+        <legend>Call Controls</legend>
+        <button id="hangup" title="Hangup" type="button">Leave Meeting</button>
+        <button id="toggle-video" title="Toggle Video" type="button">Toggle Video</button>
+        <button id="toggle-audio" title="Toggle Audio" type="button">Toggle Audio</button>
+      </fieldset>
+    </form>
+
+    <div style="display: flex">
+      <video style="width:50%" id="self-view" muted autoplay></video>
+      <div style="width:50%">
+        <video id="remote-view-video" autoplay></video>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "ciscospark-av-issue-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/app.js",
+  "scripts": {
+    "build": "rm -rf build && webpack",
+    "start": "npm run build && cd build && httpster"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ciscospark": "^1.59.0",
+    "html-webpack-plugin": "^3.2.0",
+    "httpster": "^1.0.4",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
